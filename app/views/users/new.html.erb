@@ -1,0 +1,35 @@
+<div class="main-box">
+
+<div class="box">
+<h2 class="sign-up">Sign up</h2>
+<%= form_with model: @user do |form| %>
+  <div>
+    <%= form.text_field :name, placeholder:"Name", class:"common" %>
+  </div>
+
+  <div>
+    <%= form.text_field :mobile, placeholder:"Mobile", class:"common" %>
+  </div>
+
+  <div>
+    <%= form.text_field :city, placeholder:"City", class:"common" %>
+  </div>
+
+  <div>
+    <%= form.text_field :password, placeholder:"Password", class:"common", type:"password"%>
+  </div>
+
+  <div>
+    <%= form.text_field :confirmPassword, placeholder:"Confirm  Password", class:"common", type:"password" %>
+  </div>
+
+  <div>
+    <%= form.submit "Sign up", class:"butn submit" %>
+  </div>
+  <button type = "reset" class="reset butn">RESET</button>
+      
+  
+<% end %>
+
+</div>
+</div>

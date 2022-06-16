@@ -1,0 +1,49 @@
+body{
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+.sign-up{
+    text-align: center;
+}
+
+.box{
+    background: white;
+    height: 490px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.4rem;
+} 
+
+
+
+.common{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 34px;
+    outline: none;
+}
+
+.butn{
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+.submit{
+    background:blue;
+}
+
+.reset{
+    background: red;
+}
+
+
+
