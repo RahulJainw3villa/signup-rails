@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     end
 
     def edit 
-        find_user
+        @user = User.find(params[:id])
     end
 
     def show
@@ -33,21 +33,19 @@ class UsersController < ApplicationController
     end 
 
     def update
-        find_user
-        if @user.update(user_params)
-            redirect_to users_path
+        @user = User.find(params[:id])
+        if @user.update!(user_update_params)
+            redirect_to @user
         else
           render :edit, status: :unprocessable_entity
         end
     end
 
     def destroy
-        find_user
-            if @user.destroy
-                redirect_to root_path
-            else
-                redirect_to root_path, status: :see_other
-            end
+        @user = User.find(params[:id])
+        @user.destroy
+        redirect_to users_path
+         
     end
 
     private
@@ -58,4 +56,9 @@ class UsersController < ApplicationController
         def user_params
             params.require(:user).permit(:name,:mobile,:city,:password,:confirmPassword)
         end
+
+        def user_update_params
+            params.require(:user).permit(:name,:mobile,:city)
+        end
+
 end

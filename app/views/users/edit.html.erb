@@ -8,23 +8,16 @@
   </div>
 
   <div>
-    <%= form.text_field :mobile, placeholder:"Mobile", class:"common" %>
+    <%= form.number_field :mobile, placeholder:"Mobile", class:"common" %>
   </div>
 
   <div>
     <%= form.text_field :city, placeholder:"City", class:"common" %>
   </div>
 
+  
   <div>
-    <%= form.text_field :password, placeholder:"Password", class:"common", type:"password"%>
-  </div>
-
-  <div>
-    <%= form.text_field :confirmpassword, placeholder:"Confirm  Password", class:"common", type:"password" %>
-  </div>
-
-  <div>
-    <%= form.submit "Sign up", class:"butn" %>
+    <%= form.submit "Update User", class:"butn submit" %>
   </div>
 <% end %>
 
